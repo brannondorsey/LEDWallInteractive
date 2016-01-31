@@ -59,6 +59,15 @@
 		E7F985F815E0DEA3003869B5 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F985F515E0DE99003869B5 /* Accelerate.framework */; };
 		F88A87651B93A9C8004612D1 /* FadeCandyController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F88A87631B93A9C8004612D1 /* FadeCandyController.cpp */; };
 		F88A876F1B93B689004612D1 /* OPC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F88A876D1B93B689004612D1 /* OPC.cpp */; };
+		F8F0F06A1C5A719B00BBD2BF /* FFTVisualizerApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F8F0F0681C5A719B00BBD2BF /* FFTVisualizerApp.cpp */; };
+		F8F0F0881C5A73D300BBD2BF /* ofxEasyFft.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F8F0F06E1C5A73D300BBD2BF /* ofxEasyFft.cpp */; };
+		F8F0F0891C5A73D300BBD2BF /* ofxFft.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F8F0F0701C5A73D300BBD2BF /* ofxFft.cpp */; };
+		F8F0F08A1C5A73D300BBD2BF /* ofxFftBasic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F8F0F0721C5A73D300BBD2BF /* ofxFftBasic.cpp */; };
+		F8F0F08B1C5A73D300BBD2BF /* ofxFftw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F8F0F0741C5A73D300BBD2BF /* ofxFftw.cpp */; };
+		F8F0F08C1C5A73D300BBD2BF /* ofxProcessFFT.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F8F0F0761C5A73D300BBD2BF /* ofxProcessFFT.cpp */; };
+		F8F0F08D1C5A73D300BBD2BF /* fftw3f.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8F0F0801C5A73D300BBD2BF /* fftw3f.a */; };
+		F8F0F08E1C5A73D300BBD2BF /* kiss_fft.c in Sources */ = {isa = PBXBuildFile; fileRef = F8F0F0841C5A73D300BBD2BF /* kiss_fft.c */; };
+		F8F0F08F1C5A73D300BBD2BF /* kiss_fftr.c in Sources */ = {isa = PBXBuildFile; fileRef = F8F0F0861C5A73D300BBD2BF /* kiss_fftr.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -275,6 +284,27 @@
 		F88A87641B93A9C8004612D1 /* FadeCandyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FadeCandyController.h; sourceTree = "<group>"; };
 		F88A876D1B93B689004612D1 /* OPC.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OPC.cpp; sourceTree = "<group>"; };
 		F88A876E1B93B689004612D1 /* OPC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPC.h; sourceTree = "<group>"; };
+		F8F0F0681C5A719B00BBD2BF /* FFTVisualizerApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FFTVisualizerApp.cpp; sourceTree = "<group>"; };
+		F8F0F0691C5A719B00BBD2BF /* FFTVisualizerApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFTVisualizerApp.h; sourceTree = "<group>"; };
+		F8F0F06E1C5A73D300BBD2BF /* ofxEasyFft.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxEasyFft.cpp; sourceTree = "<group>"; };
+		F8F0F06F1C5A73D300BBD2BF /* ofxEasyFft.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxEasyFft.h; sourceTree = "<group>"; };
+		F8F0F0701C5A73D300BBD2BF /* ofxFft.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxFft.cpp; sourceTree = "<group>"; };
+		F8F0F0711C5A73D300BBD2BF /* ofxFft.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxFft.h; sourceTree = "<group>"; };
+		F8F0F0721C5A73D300BBD2BF /* ofxFftBasic.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxFftBasic.cpp; sourceTree = "<group>"; };
+		F8F0F0731C5A73D300BBD2BF /* ofxFftBasic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxFftBasic.h; sourceTree = "<group>"; };
+		F8F0F0741C5A73D300BBD2BF /* ofxFftw.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxFftw.cpp; sourceTree = "<group>"; };
+		F8F0F0751C5A73D300BBD2BF /* ofxFftw.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxFftw.h; sourceTree = "<group>"; };
+		F8F0F0761C5A73D300BBD2BF /* ofxProcessFFT.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxProcessFFT.cpp; sourceTree = "<group>"; };
+		F8F0F0771C5A73D300BBD2BF /* ofxProcessFFT.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxProcessFFT.h; sourceTree = "<group>"; };
+		F8F0F07A1C5A73D300BBD2BF /* .keep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .keep; sourceTree = "<group>"; };
+		F8F0F07C1C5A73D300BBD2BF /* fftw3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fftw3.h; sourceTree = "<group>"; };
+		F8F0F0801C5A73D300BBD2BF /* fftw3f.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = fftw3f.a; sourceTree = "<group>"; };
+		F8F0F0821C5A73D300BBD2BF /* .keep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .keep; sourceTree = "<group>"; };
+		F8F0F0831C5A73D300BBD2BF /* _kiss_fft_guts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _kiss_fft_guts.h; sourceTree = "<group>"; };
+		F8F0F0841C5A73D300BBD2BF /* kiss_fft.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = kiss_fft.c; sourceTree = "<group>"; };
+		F8F0F0851C5A73D300BBD2BF /* kiss_fft.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kiss_fft.h; sourceTree = "<group>"; };
+		F8F0F0861C5A73D300BBD2BF /* kiss_fftr.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = kiss_fftr.c; sourceTree = "<group>"; };
+		F8F0F0871C5A73D300BBD2BF /* kiss_fftr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kiss_fftr.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -299,6 +329,7 @@
 				E4C2424810CC5A17004149E2 /* Cocoa.framework in Frameworks */,
 				03A30E671BAF673700EEFA03 /* opencv.a in Frameworks */,
 				E4C2424910CC5A17004149E2 /* IOKit.framework in Frameworks */,
+				F8F0F08D1C5A73D300BBD2BF /* fftw3f.a in Frameworks */,
 				E7E077E515D3B63C0020DFD4 /* CoreVideo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -566,6 +597,7 @@
 				03A30E6E1BB06D2900EEFA03 /* RowDrawApp */,
 				03A30E6D1BB06D1C00EEFA03 /* VideoPlayerApp */,
 				03A30E6C1BB06CE300EEFA03 /* OpenCVBurstApp */,
+				F8F0F06B1C5A71A600BBD2BF /* FFTVisualizerApp */,
 			);
 			name = apps;
 			sourceTree = "<group>";
@@ -691,6 +723,7 @@
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				F8F0F06C1C5A73D300BBD2BF /* ofxFft */,
 				03F22C791BB3E23600B19C3A /* ofxPhysics3d */,
 				03A30D651BAF652900EEFA03 /* ofxCv */,
 			);
@@ -786,6 +819,99 @@
 			name = openFrameworks;
 			sourceTree = "<group>";
 		};
+		F8F0F06B1C5A71A600BBD2BF /* FFTVisualizerApp */ = {
+			isa = PBXGroup;
+			children = (
+				F8F0F0681C5A719B00BBD2BF /* FFTVisualizerApp.cpp */,
+				F8F0F0691C5A719B00BBD2BF /* FFTVisualizerApp.h */,
+			);
+			name = FFTVisualizerApp;
+			sourceTree = "<group>";
+		};
+		F8F0F06C1C5A73D300BBD2BF /* ofxFft */ = {
+			isa = PBXGroup;
+			children = (
+				F8F0F06D1C5A73D300BBD2BF /* src */,
+				F8F0F0781C5A73D300BBD2BF /* libs */,
+			);
+			name = ofxFft;
+			sourceTree = "<group>";
+		};
+		F8F0F06D1C5A73D300BBD2BF /* src */ = {
+			isa = PBXGroup;
+			children = (
+				F8F0F06E1C5A73D300BBD2BF /* ofxEasyFft.cpp */,
+				F8F0F06F1C5A73D300BBD2BF /* ofxEasyFft.h */,
+				F8F0F0701C5A73D300BBD2BF /* ofxFft.cpp */,
+				F8F0F0711C5A73D300BBD2BF /* ofxFft.h */,
+				F8F0F0721C5A73D300BBD2BF /* ofxFftBasic.cpp */,
+				F8F0F0731C5A73D300BBD2BF /* ofxFftBasic.h */,
+				F8F0F0741C5A73D300BBD2BF /* ofxFftw.cpp */,
+				F8F0F0751C5A73D300BBD2BF /* ofxFftw.h */,
+				F8F0F0761C5A73D300BBD2BF /* ofxProcessFFT.cpp */,
+				F8F0F0771C5A73D300BBD2BF /* ofxProcessFFT.h */,
+			);
+			name = src;
+			path = ../../../addons/ofxFft/src;
+			sourceTree = "<group>";
+		};
+		F8F0F0781C5A73D300BBD2BF /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				F8F0F0791C5A73D300BBD2BF /* fftw */,
+				F8F0F0811C5A73D300BBD2BF /* kiss */,
+			);
+			name = libs;
+			path = ../../../addons/ofxFft/libs;
+			sourceTree = "<group>";
+		};
+		F8F0F0791C5A73D300BBD2BF /* fftw */ = {
+			isa = PBXGroup;
+			children = (
+				F8F0F07A1C5A73D300BBD2BF /* .keep */,
+				F8F0F07B1C5A73D300BBD2BF /* include */,
+				F8F0F07D1C5A73D300BBD2BF /* lib */,
+			);
+			path = fftw;
+			sourceTree = "<group>";
+		};
+		F8F0F07B1C5A73D300BBD2BF /* include */ = {
+			isa = PBXGroup;
+			children = (
+				F8F0F07C1C5A73D300BBD2BF /* fftw3.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		F8F0F07D1C5A73D300BBD2BF /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				F8F0F07F1C5A73D300BBD2BF /* osx */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		F8F0F07F1C5A73D300BBD2BF /* osx */ = {
+			isa = PBXGroup;
+			children = (
+				F8F0F0801C5A73D300BBD2BF /* fftw3f.a */,
+			);
+			path = osx;
+			sourceTree = "<group>";
+		};
+		F8F0F0811C5A73D300BBD2BF /* kiss */ = {
+			isa = PBXGroup;
+			children = (
+				F8F0F0821C5A73D300BBD2BF /* .keep */,
+				F8F0F0831C5A73D300BBD2BF /* _kiss_fft_guts.h */,
+				F8F0F0841C5A73D300BBD2BF /* kiss_fft.c */,
+				F8F0F0851C5A73D300BBD2BF /* kiss_fft.h */,
+				F8F0F0861C5A73D300BBD2BF /* kiss_fftr.c */,
+				F8F0F0871C5A73D300BBD2BF /* kiss_fftr.h */,
+			);
+			path = kiss;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -875,30 +1001,38 @@
 			files = (
 				038D84681BB49A2400EF66DE /* PS3EyeWrapper.cpp in Sources */,
 				03A30E0B1BAF661500EEFA03 /* ObjectFinder.cpp in Sources */,
+				F8F0F08F1C5A73D300BBD2BF /* kiss_fftr.c in Sources */,
 				03A30E031BAF661500EEFA03 /* Calibration.cpp in Sources */,
 				03A30E0E1BAF661500EEFA03 /* Utilities.cpp in Sources */,
 				03E604501BB758D900011000 /* OpenCVMinimalParticle.cpp in Sources */,
 				03A30E051BAF661500EEFA03 /* Distance.cpp in Sources */,
+				F8F0F08C1C5A73D300BBD2BF /* ofxProcessFFT.cpp in Sources */,
 				038D84671BB49A2400EF66DE /* ps3eye.cpp in Sources */,
 				03A30E0F1BAF661500EEFA03 /* Wrappers.cpp in Sources */,
+				F8F0F08B1C5A73D300BBD2BF /* ofxFftw.cpp in Sources */,
 				03F12FEC1BAF503D00F15CB4 /* RowDrawApp.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				03A30E091BAF661500EEFA03 /* Helpers.cpp in Sources */,
 				03F22CA81BB4757900B19C3A /* MinimalApp.cpp in Sources */,
+				F8F0F08A1C5A73D300BBD2BF /* ofxFftBasic.cpp in Sources */,
 				03F22C8D1BB3E23600B19C3A /* ofxPhysics3d.cpp in Sources */,
 				03A30E041BAF661500EEFA03 /* ContourFinder.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
 				03A30E0C1BAF661500EEFA03 /* RunningBackground.cpp in Sources */,
 				03C53F191BB8C73400F097B3 /* PongApp.cpp in Sources */,
+				F8F0F08E1C5A73D300BBD2BF /* kiss_fft.c in Sources */,
 				03A30E061BAF661500EEFA03 /* ETF.cpp in Sources */,
 				03A30E071BAF661500EEFA03 /* fdog.cpp in Sources */,
 				03A30E081BAF661500EEFA03 /* Flow.cpp in Sources */,
+				F8F0F0881C5A73D300BBD2BF /* ofxEasyFft.cpp in Sources */,
 				037779931BB0C67C004D3345 /* TrackedWall.cpp in Sources */,
 				F88A876F1B93B689004612D1 /* OPC.cpp in Sources */,
 				03EDDAB11BB1D0F9002C6CD2 /* ParticleLayer.cpp in Sources */,
 				033A5F6C1BB0CFAA00A42961 /* VideoSource.cpp in Sources */,
+				F8F0F06A1C5A719B00BBD2BF /* FFTVisualizerApp.cpp in Sources */,
 				03A30E0A1BAF661500EEFA03 /* Kalman.cpp in Sources */,
 				03A30D0C1BAF632400EEFA03 /* ofxDynamicBackgroundCV.cpp in Sources */,
+				F8F0F0891C5A73D300BBD2BF /* ofxFft.cpp in Sources */,
 				03F22C771BB3814400B19C3A /* OpenCVParticleApp.cpp in Sources */,
 				03A30E6A1BAF786F00EEFA03 /* OpenCVBurstApp.cpp in Sources */,
 				F88A87651B93A9C8004612D1 /* FadeCandyController.cpp in Sources */,
@@ -1065,9 +1199,10 @@
 					"$(PROJECT_DIR)/src",
 					/Volumes/STORAGE/WORK_IN_PROGRESS/OPENFRAMEWORKS/of_v0.8.4_osx_release/addons/ofxOpenCv/libs/opencv/lib/osx,
 					"$(PROJECT_DIR)/src/PS3EyeWrapper",
+					/Users/bdorse/Documents/of_v0.8.4_osx_release/addons/ofxFft/libs/fftw/lib/osx,
 				);
 				PRODUCT_NAME = LEDWallVideoPlayerDebug;
-				USER_HEADER_SEARCH_PATHS = src;
+				USER_HEADER_SEARCH_PATHS = "src ../../../addons/ofxFft/libs/fftw/include/";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1155,9 +1290,10 @@
 					"$(PROJECT_DIR)/src",
 					/Volumes/STORAGE/WORK_IN_PROGRESS/OPENFRAMEWORKS/of_v0.8.4_osx_release/addons/ofxOpenCv/libs/opencv/lib/osx,
 					"$(PROJECT_DIR)/src/PS3EyeWrapper",
+					/Users/bdorse/Documents/of_v0.8.4_osx_release/addons/ofxFft/libs/fftw/lib/osx,
 				);
 				PRODUCT_NAME = LEDWallVideoPlayer;
-				USER_HEADER_SEARCH_PATHS = src;
+				USER_HEADER_SEARCH_PATHS = "src ../../../addons/ofxFft/libs/fftw/include/";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

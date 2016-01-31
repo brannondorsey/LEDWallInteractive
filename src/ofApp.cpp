@@ -18,11 +18,15 @@ void ofApp::setup()
     
     ofBackground(ofColor::black);
 
-   
     fbo.allocate(480, 120);
     fbo.begin();
         ofClear(0, 0, 0, 0);
     fbo.end();
+    
+    FFTVisualizerApp* fftVisualizerApp = new FFTVisualizerApp();
+    fftVisualizerApp->name = "FFTVisualizerApp";
+    fftVisualizerApp->setup(&fbo);
+    wallApps.push_back(fftVisualizerApp);
     
     OpenCVBurstApp* openCVBurstApp = new OpenCVBurstApp();
     openCVBurstApp->name = "OpenCVBurstApp";
@@ -57,9 +61,8 @@ void ofApp::setup()
     ofSetWindowShape(ofGetScreenWidth() / 2, (ofGetScreenWidth() / 2) / aspect);
     
     hasStartedFadeCandy = false;
-
-
 }
+
 //--------------------------------------------------------------
 void ofApp::update(){
    
@@ -87,20 +90,24 @@ void ofApp::update(){
         ofExit(0);
         return;
     }
+    
     if(scheduler.doSwitchApp)
     {
-        if (currentWallAppIndex+1 < wallApps.size())
+        if (currentWallAppIndex + 1 < wallApps.size())
         {
             currentWallAppIndex++;
-            
-        }else
+        }
+        else
         {
             currentWallAppIndex = 0;
         }
+        
         OpenCVEngine::getInstance().clearTrackedWallFBOs();
+        
         fbo.begin();
             ofClear(0, 0, 0, 0);
         fbo.end();
+        
         if (fadeCandyController)
         {
             if (fadeCandyController->allClientsConnected())
@@ -111,10 +118,10 @@ void ofApp::update(){
                 fadeCandyController->update(clearPixels);
             }
         }
+        
         ofSleepMillis(1000);
         currentApp = wallApps[currentWallAppIndex];
         currentApp->onAppSwitch();
-        
         
         scheduler.doSwitchApp = false;
         
