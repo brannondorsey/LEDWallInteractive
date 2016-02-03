@@ -34,10 +34,18 @@ void ContourSillhouetteApp::setup(ofFbo* fbo_) {
     TrackedWall* wall = OpenCVEngine::getInstance().getWall(0);
     if (wall != NULL) _walls.push_back(wall);
     
-    wall = OpenCVEngine::getInstance().getWall(0);
+    wall = OpenCVEngine::getInstance().getWall(1);
     if (wall != NULL) _walls.push_back(wall);
     
     _sillhouettes.resize(2);
+    
+    _largeFbo.allocate(OpenCVEngine::getInstance().videoSourceWidth * 2, OpenCVEngine::getInstance().videoSourceHeight);
+    _largeFbo.begin();
+        ofClear(0, 0, 0, 0);
+        ofSetColor(_colorManager.getBackground());
+        ofRect(0, 0, _largeFbo.getWidth(), _largeFbo.getHeight());
+    _largeFbo.end();
+
     
     fbo->allocate(getWidth(), getHeight(), GL_RGB, 4);
     fbo->begin();
@@ -90,9 +98,9 @@ void ContourSillhouetteApp::update() {
 //                path.draw(offset.x, offset.y);
 
                 ofPoint centroid = _walls[i]->mainBlob.getCentroid2D();
-                float scale = 0.40;
+//                float scale = 0.40;
 //                path.translate(ofPoint(centroid.x, 0));
-                path.scale(scale, scale);
+//                path.scale(scale, scale);
 //                ofPoint offset(centroid - (centroid * scale));
                 
 //                centroid.x = ofMap(centroid.x, 0, _walls[i]->videoSource->getWidth(), 0, fbo->getWidth());
@@ -137,27 +145,32 @@ void ContourSillhouetteApp::_draw() {
     //    path.setColor(ofColor(255, 0, 0));
     //    path.setFilled(false);
     //    path.draw();
-    fbo->begin();
-    ofClear(0, 0, 0, 0);
-    ofSetColor(_colorManager.getBackground());
-    ofRect(0, 0, getWidth(), getHeight());
-    ofSetColor(255, 255, 255);
-    for (int i = 0; i < _sillhouettes.size(); i++) {
-        
-        if (i == 1) {
-            ofPushMatrix();
-            ofTranslate(getWidth()/2, 0);
+    _largeFbo.begin();
+        ofSetColor(_colorManager.getBackground());
+        ofRect(0, 0, _largeFbo.getWidth(), _largeFbo.getHeight());
+        ofSetColor(255, 255, 255);
+        for (int i = 0; i < _sillhouettes.size(); i++) {
+            
+            if (i == 1) {
+                ofPushMatrix();
+                ofTranslate(_largeFbo.getWidth()/2, 0);
+            }
+            
+            for (int j = 0; j < _sillhouettes[i].size(); j++) {
+                _sillhouettes[i][j]->draw();
+            }
+            
+            if (i == 1) {
+                ofPopMatrix();
+            }
         }
-        
-        for (int j = 0; j < _sillhouettes[i].size(); j++) {
-            _sillhouettes[i][j]->draw();
-        }
-        
-        if (i == 1) {
-            ofPopMatrix();
-        }
-    }
+    _largeFbo.end();
     
+    fbo->begin();
+        ofSetColor(_colorManager.getBackground());
+        ofRect(0, 0, getWidth(), getHeight());
+        ofSetColor(255);
+        _largeFbo.draw(0, 0, getWidth(), getHeight());
     fbo->end();
     fbo->draw(0, 0);
     

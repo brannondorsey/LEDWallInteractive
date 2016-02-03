@@ -35,6 +35,7 @@ protected:
     std::vector<TrackedWall*> _walls;
     std::vector<std::vector<ContourSillhouette*> > _sillhouettes;
 
+    ofFbo _largeFbo;
     float _alphaDecrement;
     float _scaleIncrement;
     float _hueInterval;
