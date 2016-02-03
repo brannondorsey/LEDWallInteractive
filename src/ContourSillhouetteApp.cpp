@@ -22,15 +22,7 @@ void ContourSillhouetteApp::setup(ofFbo* fbo_) {
     ofColor bg = ofColor::turquoise;
     bg.setSaturation(255);
     _colorManager.setBackground(bg);
-//    TrackedWall* wall = new TrackedWall(1);
-//    wall->setup("Wall_Pablo_Straight.mov");
-//    _walls.push_back(wall);
-//    
-//    wall = new TrackedWall(2);
-//    wall->setup("Wall_Pablo_Straight.mov");
-//    ofVideoPlayer& player = wall->videoSource->videoPlayer;
-//    player.setFrame(int(ofRandom(player.getTotalNumFrames())));
-//    _walls.push_back(wall);
+
     TrackedWall* wall = OpenCVEngine::getInstance().getWall(0);
     if (wall != NULL) _walls.push_back(wall);
     
@@ -93,20 +85,7 @@ void ContourSillhouetteApp::update() {
                 //                }
                 //                cout << sum << endl << endl;
                 
-//                path.scale(_scaleSum, _scaleSum);
-//                ofPoint offset = _origCentroid - (_origCentroid * _scaleSum);
-//                path.draw(offset.x, offset.y);
-
                 ofPoint centroid = _walls[i]->mainBlob.getCentroid2D();
-//                float scale = 0.40;
-//                path.translate(ofPoint(centroid.x, 0));
-//                path.scale(scale, scale);
-//                ofPoint offset(centroid - (centroid * scale));
-                
-//                centroid.x = ofMap(centroid.x, 0, _walls[i]->videoSource->getWidth(), 0, fbo->getWidth());
-
-//                centroid.y = 0;
-                
                 ContourSillhouette* s = new ContourSillhouette(path, centroid);
                 _colorManager.update();
                 s->setColor(_colorManager.getForeground());
@@ -137,14 +116,7 @@ void ContourSillhouetteApp::update() {
 }
 
 void ContourSillhouetteApp::_draw() {
-    //    std::vector<ofPolyline> polylines;
-    //    polylines.push_back(wall->mainBlob);
-    //    ofPath path = polysToPath(polylines);
-    
-    //    path.setStrokeWidth(20);
-    //    path.setColor(ofColor(255, 0, 0));
-    //    path.setFilled(false);
-    //    path.draw();
+
     _largeFbo.begin();
         ofSetColor(_colorManager.getBackground());
         ofRect(0, 0, _largeFbo.getWidth(), _largeFbo.getHeight());
@@ -173,20 +145,6 @@ void ContourSillhouetteApp::_draw() {
         _largeFbo.draw(0, 0, getWidth(), getHeight());
     fbo->end();
     fbo->draw(0, 0);
-    
-    //
-    //    ofPoint origCentroid = wall->mainBlob.getCentroid2D();
-    //    ofPoint newCentroid = origCentroid * 0.7;
-    //    ofPoint offset = origCentroid - newCentroid;
-    //
-    //    path.scale(0.7, 0.7);
-    //    path.setFillColor(ofColor(0, 0, 255));
-    //
-    //    path.draw(offset.x, offset.y);
-    
-    //    wall->mainBlob.simplify();
-    //    ofSetLineWidth(100);
-    //    wall->mainBlob.draw();
 }
 
 ofPath ContourSillhouetteApp::_polysToPath(const vector<ofPolyline>& polylines) {
