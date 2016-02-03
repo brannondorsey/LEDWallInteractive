@@ -30,7 +30,7 @@ struct TextureSequence
             vector<ofFile> files = dir.getFiles();
             for(int i=0; i<files.size(); i++)
             {
-                ofLogVerbose() << files[i].getFileName();
+//                ofLogVerbose() << files[i].getFileName();
                 ofTexture texture;
                 bool didLoad = ofLoadImage(texture, files[i].getAbsolutePath());
                 //ofLogVerbose() << files[i].getFileName() << " LOAD STATUS " << didLoad;

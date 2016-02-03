@@ -14,6 +14,7 @@
 #include "OpenCVBurstApp.h"
 #include "OpenCVParticleApp.h"
 #include "FFTVisualizerApp.h"
+#include "ContourSillhouetteApp.h"
 
 #if 0
 #include "RowDrawApp.h"

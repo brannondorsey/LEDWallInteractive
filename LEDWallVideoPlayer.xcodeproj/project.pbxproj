@@ -59,6 +59,9 @@
 		E7F985F815E0DEA3003869B5 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F985F515E0DE99003869B5 /* Accelerate.framework */; };
 		F88A87651B93A9C8004612D1 /* FadeCandyController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F88A87631B93A9C8004612D1 /* FadeCandyController.cpp */; };
 		F88A876F1B93B689004612D1 /* OPC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F88A876D1B93B689004612D1 /* OPC.cpp */; };
+		F8F0BF401C5EB508008878B2 /* ContourSillhouetteApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F8F0BF3E1C5EB508008878B2 /* ContourSillhouetteApp.cpp */; };
+		F8F0BF441C5EB922008878B2 /* ColorManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F8F0BF421C5EB922008878B2 /* ColorManager.cpp */; };
+		F8F0BF471C5EBA03008878B2 /* ContourSillhouette.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F8F0BF451C5EBA03008878B2 /* ContourSillhouette.cpp */; };
 		F8F0F06A1C5A719B00BBD2BF /* FFTVisualizerApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F8F0F0681C5A719B00BBD2BF /* FFTVisualizerApp.cpp */; };
 		F8F0F0881C5A73D300BBD2BF /* ofxEasyFft.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F8F0F06E1C5A73D300BBD2BF /* ofxEasyFft.cpp */; };
 		F8F0F0891C5A73D300BBD2BF /* ofxFft.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F8F0F0701C5A73D300BBD2BF /* ofxFft.cpp */; };
@@ -284,6 +287,12 @@
 		F88A87641B93A9C8004612D1 /* FadeCandyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FadeCandyController.h; sourceTree = "<group>"; };
 		F88A876D1B93B689004612D1 /* OPC.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OPC.cpp; sourceTree = "<group>"; };
 		F88A876E1B93B689004612D1 /* OPC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPC.h; sourceTree = "<group>"; };
+		F8F0BF3E1C5EB508008878B2 /* ContourSillhouetteApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ContourSillhouetteApp.cpp; sourceTree = "<group>"; };
+		F8F0BF3F1C5EB508008878B2 /* ContourSillhouetteApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContourSillhouetteApp.h; sourceTree = "<group>"; };
+		F8F0BF421C5EB922008878B2 /* ColorManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ColorManager.cpp; sourceTree = "<group>"; };
+		F8F0BF431C5EB922008878B2 /* ColorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorManager.h; sourceTree = "<group>"; };
+		F8F0BF451C5EBA03008878B2 /* ContourSillhouette.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ContourSillhouette.cpp; sourceTree = "<group>"; };
+		F8F0BF461C5EBA03008878B2 /* ContourSillhouette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContourSillhouette.h; sourceTree = "<group>"; };
 		F8F0F0681C5A719B00BBD2BF /* FFTVisualizerApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FFTVisualizerApp.cpp; sourceTree = "<group>"; };
 		F8F0F0691C5A719B00BBD2BF /* FFTVisualizerApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFTVisualizerApp.h; sourceTree = "<group>"; };
 		F8F0F06E1C5A73D300BBD2BF /* ofxEasyFft.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxEasyFft.cpp; sourceTree = "<group>"; };
@@ -598,6 +607,7 @@
 				03A30E6D1BB06D1C00EEFA03 /* VideoPlayerApp */,
 				03A30E6C1BB06CE300EEFA03 /* OpenCVBurstApp */,
 				F8F0F06B1C5A71A600BBD2BF /* FFTVisualizerApp */,
+				F8F0BF411C5EB50E008878B2 /* ContourSillhouetteApp */,
 			);
 			name = apps;
 			sourceTree = "<group>";
@@ -806,6 +816,8 @@
 				F88A876E1B93B689004612D1 /* OPC.h */,
 				039618511BB71880007DC23F /* Scheduler.h */,
 				03360F171BB859F6003D682A /* StartupController.h */,
+				F8F0BF421C5EB922008878B2 /* ColorManager.cpp */,
+				F8F0BF431C5EB922008878B2 /* ColorManager.h */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -817,6 +829,17 @@
 				E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */,
 			);
 			name = openFrameworks;
+			sourceTree = "<group>";
+		};
+		F8F0BF411C5EB50E008878B2 /* ContourSillhouetteApp */ = {
+			isa = PBXGroup;
+			children = (
+				F8F0BF3F1C5EB508008878B2 /* ContourSillhouetteApp.h */,
+				F8F0BF3E1C5EB508008878B2 /* ContourSillhouetteApp.cpp */,
+				F8F0BF461C5EBA03008878B2 /* ContourSillhouette.h */,
+				F8F0BF451C5EBA03008878B2 /* ContourSillhouette.cpp */,
+			);
+			name = ContourSillhouetteApp;
 			sourceTree = "<group>";
 		};
 		F8F0F06B1C5A71A600BBD2BF /* FFTVisualizerApp */ = {
@@ -1022,12 +1045,14 @@
 				03C53F191BB8C73400F097B3 /* PongApp.cpp in Sources */,
 				F8F0F08E1C5A73D300BBD2BF /* kiss_fft.c in Sources */,
 				03A30E061BAF661500EEFA03 /* ETF.cpp in Sources */,
+				F8F0BF471C5EBA03008878B2 /* ContourSillhouette.cpp in Sources */,
 				03A30E071BAF661500EEFA03 /* fdog.cpp in Sources */,
 				03A30E081BAF661500EEFA03 /* Flow.cpp in Sources */,
 				F8F0F0881C5A73D300BBD2BF /* ofxEasyFft.cpp in Sources */,
 				037779931BB0C67C004D3345 /* TrackedWall.cpp in Sources */,
 				F88A876F1B93B689004612D1 /* OPC.cpp in Sources */,
 				03EDDAB11BB1D0F9002C6CD2 /* ParticleLayer.cpp in Sources */,
+				F8F0BF401C5EB508008878B2 /* ContourSillhouetteApp.cpp in Sources */,
 				033A5F6C1BB0CFAA00A42961 /* VideoSource.cpp in Sources */,
 				F8F0F06A1C5A719B00BBD2BF /* FFTVisualizerApp.cpp in Sources */,
 				03A30E0A1BAF661500EEFA03 /* Kalman.cpp in Sources */,
@@ -1036,6 +1061,7 @@
 				03F22C771BB3814400B19C3A /* OpenCVParticleApp.cpp in Sources */,
 				03A30E6A1BAF786F00EEFA03 /* OpenCVBurstApp.cpp in Sources */,
 				F88A87651B93A9C8004612D1 /* FadeCandyController.cpp in Sources */,
+				F8F0BF441C5EB922008878B2 /* ColorManager.cpp in Sources */,
 				03A30E0D1BAF661500EEFA03 /* Tracker.cpp in Sources */,
 				03F12FE91BAF4CAB00F15CB4 /* VideoPlayerApp.cpp in Sources */,
 				03F22C8E1BB3E23600B19C3A /* ofxParticle.cpp in Sources */,

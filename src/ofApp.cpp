@@ -23,6 +23,11 @@ void ofApp::setup()
         ofClear(0, 0, 0, 0);
     fbo.end();
     
+    ContourSillhouetteApp* contourSillhouetteApp = new ContourSillhouetteApp();
+    contourSillhouetteApp->name = "ContourSillhouetteApp";
+    contourSillhouetteApp->setup(&fbo);
+    wallApps.push_back(contourSillhouetteApp);
+    
     FFTVisualizerApp* fftVisualizerApp = new FFTVisualizerApp();
     fftVisualizerApp->name = "FFTVisualizerApp";
     fftVisualizerApp->setup(&fbo);
