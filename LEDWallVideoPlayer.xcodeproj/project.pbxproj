@@ -57,6 +57,9 @@
 		E7E077E515D3B63C0020DFD4 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E077E415D3B63C0020DFD4 /* CoreVideo.framework */; };
 		E7E077E815D3B6510020DFD4 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E077E715D3B6510020DFD4 /* QTKit.framework */; };
 		E7F985F815E0DEA3003869B5 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F985F515E0DE99003869B5 /* Accelerate.framework */; };
+		F82758141C61CB2B008FEAB0 /* FluidDynamicsApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F82758121C61CB2B008FEAB0 /* FluidDynamicsApp.cpp */; };
+		F82758191C61CB53008FEAB0 /* ofxFluid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F82758171C61CB53008FEAB0 /* ofxFluid.cpp */; };
+		F82758441C61CC75008FEAB0 /* ofxFXObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F82758371C61CC75008FEAB0 /* ofxFXObject.cpp */; };
 		F88A87651B93A9C8004612D1 /* FadeCandyController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F88A87631B93A9C8004612D1 /* FadeCandyController.cpp */; };
 		F88A876F1B93B689004612D1 /* OPC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F88A876D1B93B689004612D1 /* OPC.cpp */; };
 		F8F0BF401C5EB508008878B2 /* ContourSillhouetteApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F8F0BF3E1C5EB508008878B2 /* ContourSillhouetteApp.cpp */; };
@@ -283,6 +286,46 @@
 		E7E077E415D3B63C0020DFD4 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
 		E7E077E715D3B6510020DFD4 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		E7F985F515E0DE99003869B5 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = /System/Library/Frameworks/Accelerate.framework; sourceTree = "<absolute>"; };
+		F82758121C61CB2B008FEAB0 /* FluidDynamicsApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FluidDynamicsApp.cpp; sourceTree = "<group>"; };
+		F82758131C61CB2B008FEAB0 /* FluidDynamicsApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FluidDynamicsApp.h; sourceTree = "<group>"; };
+		F82758171C61CB53008FEAB0 /* ofxFluid.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxFluid.cpp; sourceTree = "<group>"; };
+		F82758181C61CB53008FEAB0 /* ofxFluid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxFluid.h; sourceTree = "<group>"; };
+		F827581D1C61CC75008FEAB0 /* ofxBlend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxBlend.h; sourceTree = "<group>"; };
+		F827581E1C61CC75008FEAB0 /* ofxClone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxClone.h; sourceTree = "<group>"; };
+		F827581F1C61CC75008FEAB0 /* ofxMask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxMask.h; sourceTree = "<group>"; };
+		F82758201C61CC75008FEAB0 /* ofxMultiTexture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxMultiTexture.h; sourceTree = "<group>"; };
+		F82758221C61CC75008FEAB0 /* ofxBarrelChromaAb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxBarrelChromaAb.h; sourceTree = "<group>"; };
+		F82758231C61CC75008FEAB0 /* ofxBloom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxBloom.h; sourceTree = "<group>"; };
+		F82758241C61CC75008FEAB0 /* ofxBlur.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxBlur.h; sourceTree = "<group>"; };
+		F82758251C61CC75008FEAB0 /* ofxBokeh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxBokeh.h; sourceTree = "<group>"; };
+		F82758261C61CC75008FEAB0 /* ofxChromaAb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxChromaAb.h; sourceTree = "<group>"; };
+		F82758271C61CC75008FEAB0 /* ofxChromaGlitch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxChromaGlitch.h; sourceTree = "<group>"; };
+		F82758281C61CC75008FEAB0 /* ofxContrast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxContrast.h; sourceTree = "<group>"; };
+		F82758291C61CC75008FEAB0 /* ofxGaussianBlur.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxGaussianBlur.h; sourceTree = "<group>"; };
+		F827582A1C61CC75008FEAB0 /* ofxGlow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxGlow.h; sourceTree = "<group>"; };
+		F827582B1C61CC75008FEAB0 /* ofxGrayscale.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxGrayscale.h; sourceTree = "<group>"; };
+		F827582C1C61CC75008FEAB0 /* ofxInverse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxInverse.h; sourceTree = "<group>"; };
+		F827582D1C61CC75008FEAB0 /* ofxLUT.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxLUT.h; sourceTree = "<group>"; };
+		F827582E1C61CC75008FEAB0 /* ofxMedian.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxMedian.h; sourceTree = "<group>"; };
+		F827582F1C61CC75008FEAB0 /* ofxOldTv.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxOldTv.h; sourceTree = "<group>"; };
+		F82758311C61CC75008FEAB0 /* ofxFBM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxFBM.h; sourceTree = "<group>"; };
+		F82758321C61CC75008FEAB0 /* ofxFire.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxFire.h; sourceTree = "<group>"; };
+		F82758331C61CC75008FEAB0 /* ofxGrayScott.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxGrayScott.h; sourceTree = "<group>"; };
+		F82758341C61CC75008FEAB0 /* ofxNoise.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxNoise.h; sourceTree = "<group>"; };
+		F82758351C61CC75008FEAB0 /* ofxTint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxTint.h; sourceTree = "<group>"; };
+		F82758361C61CC75008FEAB0 /* ofxFX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxFX.h; sourceTree = "<group>"; };
+		F82758371C61CC75008FEAB0 /* ofxFXObject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxFXObject.cpp; sourceTree = "<group>"; };
+		F82758381C61CC75008FEAB0 /* ofxFXObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxFXObject.h; sourceTree = "<group>"; };
+		F82758391C61CC75008FEAB0 /* ofxSwapBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxSwapBuffer.h; sourceTree = "<group>"; };
+		F827583B1C61CC75008FEAB0 /* ofxAbsDiff.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxAbsDiff.h; sourceTree = "<group>"; };
+		F827583C1C61CC75008FEAB0 /* ofxBounce.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxBounce.h; sourceTree = "<group>"; };
+		F827583D1C61CC75008FEAB0 /* ofxDisplacePixels.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxDisplacePixels.h; sourceTree = "<group>"; };
+		F827583E1C61CC75008FEAB0 /* ofxEdgeDetect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxEdgeDetect.h; sourceTree = "<group>"; };
+		F827583F1C61CC75008FEAB0 /* ofxFlow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxFlow.h; sourceTree = "<group>"; };
+		F82758401C61CC75008FEAB0 /* ofxNormals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxNormals.h; sourceTree = "<group>"; };
+		F82758411C61CC75008FEAB0 /* ofxRipples.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxRipples.h; sourceTree = "<group>"; };
+		F82758421C61CC75008FEAB0 /* ofxSubstract.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxSubstract.h; sourceTree = "<group>"; };
+		F82758431C61CC75008FEAB0 /* ofxThreshold.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxThreshold.h; sourceTree = "<group>"; };
 		F88A87631B93A9C8004612D1 /* FadeCandyController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FadeCandyController.cpp; sourceTree = "<group>"; };
 		F88A87641B93A9C8004612D1 /* FadeCandyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FadeCandyController.h; sourceTree = "<group>"; };
 		F88A876D1B93B689004612D1 /* OPC.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OPC.cpp; sourceTree = "<group>"; };
@@ -608,6 +651,7 @@
 				03A30E6C1BB06CE300EEFA03 /* OpenCVBurstApp */,
 				F8F0F06B1C5A71A600BBD2BF /* FFTVisualizerApp */,
 				F8F0BF411C5EB50E008878B2 /* ContourSillhouetteApp */,
+				F82758101C61CA29008FEAB0 /* FluidDynamicsApp */,
 			);
 			name = apps;
 			sourceTree = "<group>";
@@ -733,6 +777,8 @@
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				F827581A1C61CC75008FEAB0 /* ofxFX */,
+				F82758151C61CB53008FEAB0 /* ofxFluid */,
 				F8F0F06C1C5A73D300BBD2BF /* ofxFft */,
 				03F22C791BB3E23600B19C3A /* ofxPhysics3d */,
 				03A30D651BAF652900EEFA03 /* ofxCv */,
@@ -829,6 +875,117 @@
 				E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */,
 			);
 			name = openFrameworks;
+			sourceTree = "<group>";
+		};
+		F82758101C61CA29008FEAB0 /* FluidDynamicsApp */ = {
+			isa = PBXGroup;
+			children = (
+				F82758121C61CB2B008FEAB0 /* FluidDynamicsApp.cpp */,
+				F82758131C61CB2B008FEAB0 /* FluidDynamicsApp.h */,
+			);
+			name = FluidDynamicsApp;
+			sourceTree = "<group>";
+		};
+		F82758151C61CB53008FEAB0 /* ofxFluid */ = {
+			isa = PBXGroup;
+			children = (
+				F82758161C61CB53008FEAB0 /* src */,
+			);
+			name = ofxFluid;
+			sourceTree = "<group>";
+		};
+		F82758161C61CB53008FEAB0 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				F82758171C61CB53008FEAB0 /* ofxFluid.cpp */,
+				F82758181C61CB53008FEAB0 /* ofxFluid.h */,
+			);
+			name = src;
+			path = ../../../addons/ofxFluid/src;
+			sourceTree = "<group>";
+		};
+		F827581A1C61CC75008FEAB0 /* ofxFX */ = {
+			isa = PBXGroup;
+			children = (
+				F827581B1C61CC75008FEAB0 /* src */,
+			);
+			name = ofxFX;
+			sourceTree = "<group>";
+		};
+		F827581B1C61CC75008FEAB0 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				F827581C1C61CC75008FEAB0 /* composers */,
+				F82758211C61CC75008FEAB0 /* filters */,
+				F82758301C61CC75008FEAB0 /* generative */,
+				F82758361C61CC75008FEAB0 /* ofxFX.h */,
+				F82758371C61CC75008FEAB0 /* ofxFXObject.cpp */,
+				F82758381C61CC75008FEAB0 /* ofxFXObject.h */,
+				F82758391C61CC75008FEAB0 /* ofxSwapBuffer.h */,
+				F827583A1C61CC75008FEAB0 /* operations */,
+			);
+			name = src;
+			path = ../../../addons/ofxFX/src;
+			sourceTree = "<group>";
+		};
+		F827581C1C61CC75008FEAB0 /* composers */ = {
+			isa = PBXGroup;
+			children = (
+				F827581D1C61CC75008FEAB0 /* ofxBlend.h */,
+				F827581E1C61CC75008FEAB0 /* ofxClone.h */,
+				F827581F1C61CC75008FEAB0 /* ofxMask.h */,
+				F82758201C61CC75008FEAB0 /* ofxMultiTexture.h */,
+			);
+			path = composers;
+			sourceTree = "<group>";
+		};
+		F82758211C61CC75008FEAB0 /* filters */ = {
+			isa = PBXGroup;
+			children = (
+				F82758221C61CC75008FEAB0 /* ofxBarrelChromaAb.h */,
+				F82758231C61CC75008FEAB0 /* ofxBloom.h */,
+				F82758241C61CC75008FEAB0 /* ofxBlur.h */,
+				F82758251C61CC75008FEAB0 /* ofxBokeh.h */,
+				F82758261C61CC75008FEAB0 /* ofxChromaAb.h */,
+				F82758271C61CC75008FEAB0 /* ofxChromaGlitch.h */,
+				F82758281C61CC75008FEAB0 /* ofxContrast.h */,
+				F82758291C61CC75008FEAB0 /* ofxGaussianBlur.h */,
+				F827582A1C61CC75008FEAB0 /* ofxGlow.h */,
+				F827582B1C61CC75008FEAB0 /* ofxGrayscale.h */,
+				F827582C1C61CC75008FEAB0 /* ofxInverse.h */,
+				F827582D1C61CC75008FEAB0 /* ofxLUT.h */,
+				F827582E1C61CC75008FEAB0 /* ofxMedian.h */,
+				F827582F1C61CC75008FEAB0 /* ofxOldTv.h */,
+			);
+			path = filters;
+			sourceTree = "<group>";
+		};
+		F82758301C61CC75008FEAB0 /* generative */ = {
+			isa = PBXGroup;
+			children = (
+				F82758311C61CC75008FEAB0 /* ofxFBM.h */,
+				F82758321C61CC75008FEAB0 /* ofxFire.h */,
+				F82758331C61CC75008FEAB0 /* ofxGrayScott.h */,
+				F82758341C61CC75008FEAB0 /* ofxNoise.h */,
+				F82758351C61CC75008FEAB0 /* ofxTint.h */,
+			);
+			path = generative;
+			sourceTree = "<group>";
+		};
+		F827583A1C61CC75008FEAB0 /* operations */ = {
+			isa = PBXGroup;
+			children = (
+				F827583B1C61CC75008FEAB0 /* ofxAbsDiff.h */,
+				F827583C1C61CC75008FEAB0 /* ofxBounce.h */,
+				F827583D1C61CC75008FEAB0 /* ofxDisplacePixels.h */,
+				F827583E1C61CC75008FEAB0 /* ofxEdgeDetect.h */,
+				F827583F1C61CC75008FEAB0 /* ofxFlow.h */,
+				F82758401C61CC75008FEAB0 /* ofxNormals.h */,
+				F82758411C61CC75008FEAB0 /* ofxRipples.h */,
+				F82758421C61CC75008FEAB0 /* ofxSubstract.h */,
+				F82758431C61CC75008FEAB0 /* ofxThreshold.h */,
+			);
+			path = operations;
 			sourceTree = "<group>";
 		};
 		F8F0BF411C5EB50E008878B2 /* ContourSillhouetteApp */ = {
@@ -1031,6 +1188,7 @@
 				03A30E051BAF661500EEFA03 /* Distance.cpp in Sources */,
 				F8F0F08C1C5A73D300BBD2BF /* ofxProcessFFT.cpp in Sources */,
 				038D84671BB49A2400EF66DE /* ps3eye.cpp in Sources */,
+				F82758141C61CB2B008FEAB0 /* FluidDynamicsApp.cpp in Sources */,
 				03A30E0F1BAF661500EEFA03 /* Wrappers.cpp in Sources */,
 				F8F0F08B1C5A73D300BBD2BF /* ofxFftw.cpp in Sources */,
 				03F12FEC1BAF503D00F15CB4 /* RowDrawApp.cpp in Sources */,
@@ -1059,12 +1217,14 @@
 				03A30D0C1BAF632400EEFA03 /* ofxDynamicBackgroundCV.cpp in Sources */,
 				F8F0F0891C5A73D300BBD2BF /* ofxFft.cpp in Sources */,
 				03F22C771BB3814400B19C3A /* OpenCVParticleApp.cpp in Sources */,
+				F82758441C61CC75008FEAB0 /* ofxFXObject.cpp in Sources */,
 				03A30E6A1BAF786F00EEFA03 /* OpenCVBurstApp.cpp in Sources */,
 				F88A87651B93A9C8004612D1 /* FadeCandyController.cpp in Sources */,
 				F8F0BF441C5EB922008878B2 /* ColorManager.cpp in Sources */,
 				03A30E0D1BAF661500EEFA03 /* Tracker.cpp in Sources */,
 				03F12FE91BAF4CAB00F15CB4 /* VideoPlayerApp.cpp in Sources */,
 				03F22C8E1BB3E23600B19C3A /* ofxParticle.cpp in Sources */,
+				F82758191C61CB53008FEAB0 /* ofxFluid.cpp in Sources */,
 				03F12FE61BAF4C4800F15CB4 /* WallAppBase.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

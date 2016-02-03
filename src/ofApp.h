@@ -15,6 +15,7 @@
 #include "OpenCVParticleApp.h"
 #include "FFTVisualizerApp.h"
 #include "ContourSillhouetteApp.h"
+#include "FluidDynamicsApp.h"
 
 #if 0
 #include "RowDrawApp.h"

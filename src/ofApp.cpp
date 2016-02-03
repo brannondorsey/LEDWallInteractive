@@ -23,6 +23,11 @@ void ofApp::setup()
         ofClear(0, 0, 0, 0);
     fbo.end();
     
+    FluidDynamicsApp* fluidDynamicsApp = new FluidDynamicsApp();
+    fluidDynamicsApp->name = "FluidDynamicsApp";
+    fluidDynamicsApp->setup(&fbo);
+    wallApps.push_back(fluidDynamicsApp);
+    
     ContourSillhouetteApp* contourSillhouetteApp = new ContourSillhouetteApp();
     contourSillhouetteApp->name = "ContourSillhouetteApp";
     contourSillhouetteApp->setup(&fbo);
