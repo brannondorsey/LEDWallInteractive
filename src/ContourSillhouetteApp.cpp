@@ -48,10 +48,10 @@ void ContourSillhouetteApp::setup(ofFbo* fbo_) {
     fbo->end();
     
     _lastTimerMillis = 0;
-    _alphaDecrement = 1.01;
+    _alphaDecrement = 2.01;
     _scaleIncrement = 0.03;
     _hueInterval = 5;
-    _timerMillis = 250;
+    _timerMillis = 350;
 }
 
 void ContourSillhouetteApp::onAppSwitch() {
