@@ -91,17 +91,6 @@ bool FadeCandyController::connect()
     return allClientsConnected();
 }
 
-
-
-
-
-ofColor getRandomColor()
-{
-    return ofColor(ofRandom(0, 255), ofRandom(0, 255), ofRandom(0, 255));
-}
-
-
-
 void FadeCandyController::update(ofPixels& pixels){
 
     int totalStripsX = 48;

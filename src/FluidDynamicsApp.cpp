@@ -103,7 +103,7 @@ void FluidDynamicsApp::setup(ofFbo *fbo_) {
 };
 
 void FluidDynamicsApp::update() {
-    
+    ofPushStyle();
     _colorManager.update();
     
     OpenCVEngine::getInstance().update();
@@ -133,6 +133,7 @@ void FluidDynamicsApp::update() {
     
     _fluid.update();
     _draw();
+    ofPopStyle();
 };
 
 void FluidDynamicsApp::onAppSwitch() {
@@ -154,6 +155,5 @@ void FluidDynamicsApp::_draw() {
         _largeFbo.draw(0, 0, getWidth(), getHeight());
     fbo->end();
     fbo->draw(0, 0);
-
 };
 

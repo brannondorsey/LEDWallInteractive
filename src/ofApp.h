@@ -7,7 +7,7 @@
 
 #include "FadeCandyController.h"
 #include "WallAppBase.h"
-
+#include "ColorSchemes.h"
 
 #include "OpenCVMinimalParticle.h"
 #include "VideoPlayerApp.h"
@@ -49,6 +49,7 @@ public:
 
     StartupController startupController;
     Scheduler scheduler;
+    ColorSchemes colorSchemes;
     bool hasStartedFadeCandy;
     bool disableFadeCandies;
 

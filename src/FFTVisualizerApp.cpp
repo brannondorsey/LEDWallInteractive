@@ -31,10 +31,12 @@ void FFTVisualizerApp::setup(ofFbo* fbo_) {
 };
 
 void FFTVisualizerApp::update() {
+    ofPushStyle();
     fft.update();
     if (shapeHue >= 360) shapeHue = 0;
     shapeColor.setHueAngle(shapeHue +=  hueInterval);
     draw(0, 0, getWidth(), getHeight());
+    ofPopStyle();
 };
 
 void FFTVisualizerApp::draw(int x, int y, int width, int height) {

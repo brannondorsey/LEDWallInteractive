@@ -15,10 +15,11 @@ void ofApp::setup()
     bool skipRPiReboot = true;
     
     startupController.setup(skipRPiReboot);
+    colorSchemes.setup();
     
     ofBackground(ofColor::black);
 
-    fbo.allocate(480, 120);
+    fbo.allocate(480, 120, GL_RGBA, 4);
     fbo.begin();
         ofClear(0, 0, 0, 0);
     fbo.end();
@@ -69,6 +70,7 @@ void ofApp::setup()
     currentApp = wallApps[currentWallAppIndex];
     float aspect = currentApp->getWidth() / currentApp->getHeight();
     ofSetWindowShape(ofGetScreenWidth() / 2, (ofGetScreenWidth() / 2) / aspect);
+    ofEnableAlphaBlending();
     
     hasStartedFadeCandy = false;
 }

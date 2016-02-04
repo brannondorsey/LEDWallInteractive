@@ -31,7 +31,9 @@ void ContourSillhouetteApp::setup(ofFbo* fbo_) {
     
     _sillhouettes.resize(2);
     
-    _largeFbo.allocate(OpenCVEngine::getInstance().videoSourceWidth * 2, OpenCVEngine::getInstance().videoSourceHeight);
+    _largeFbo.allocate(OpenCVEngine::getInstance().videoSourceWidth * 2,
+                       OpenCVEngine::getInstance().videoSourceHeight,
+                       GL_RGBA, 4);
     _largeFbo.begin();
         ofClear(0, 0, 0, 0);
         ofSetColor(_colorManager.getBackground());
@@ -39,7 +41,7 @@ void ContourSillhouetteApp::setup(ofFbo* fbo_) {
     _largeFbo.end();
 
     
-    fbo->allocate(getWidth(), getHeight(), GL_RGB, 4);
+    fbo->allocate(getWidth(), getHeight(), GL_RGBA, 4);
     fbo->begin();
         ofClear(0, 0, 0, 0);
         ofSetColor(_colorManager.getBackground());
@@ -60,6 +62,7 @@ void ContourSillhouetteApp::onAppSwitch() {
 
 void ContourSillhouetteApp::update() {
 
+    ofPushStyle();
     OpenCVEngine::getInstance().update();
     _colorManager.setHueInterval(_hueInterval);
     
@@ -113,6 +116,7 @@ void ContourSillhouetteApp::update() {
     }
     
     _draw();
+    ofPopStyle();
 }
 
 void ContourSillhouetteApp::_draw() {

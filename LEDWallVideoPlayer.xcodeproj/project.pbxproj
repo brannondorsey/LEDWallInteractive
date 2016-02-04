@@ -60,6 +60,7 @@
 		F82758141C61CB2B008FEAB0 /* FluidDynamicsApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F82758121C61CB2B008FEAB0 /* FluidDynamicsApp.cpp */; };
 		F82758191C61CB53008FEAB0 /* ofxFluid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F82758171C61CB53008FEAB0 /* ofxFluid.cpp */; };
 		F82758441C61CC75008FEAB0 /* ofxFXObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F82758371C61CC75008FEAB0 /* ofxFXObject.cpp */; };
+		F836754C1C63CC4000E59C2C /* ColorSchemes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F836754A1C63CC4000E59C2C /* ColorSchemes.cpp */; };
 		F88A87651B93A9C8004612D1 /* FadeCandyController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F88A87631B93A9C8004612D1 /* FadeCandyController.cpp */; };
 		F88A876F1B93B689004612D1 /* OPC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F88A876D1B93B689004612D1 /* OPC.cpp */; };
 		F8F0BF401C5EB508008878B2 /* ContourSillhouetteApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F8F0BF3E1C5EB508008878B2 /* ContourSillhouetteApp.cpp */; };
@@ -326,6 +327,8 @@
 		F82758411C61CC75008FEAB0 /* ofxRipples.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxRipples.h; sourceTree = "<group>"; };
 		F82758421C61CC75008FEAB0 /* ofxSubstract.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxSubstract.h; sourceTree = "<group>"; };
 		F82758431C61CC75008FEAB0 /* ofxThreshold.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxThreshold.h; sourceTree = "<group>"; };
+		F836754A1C63CC4000E59C2C /* ColorSchemes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ColorSchemes.cpp; sourceTree = "<group>"; };
+		F836754B1C63CC4000E59C2C /* ColorSchemes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorSchemes.h; sourceTree = "<group>"; };
 		F88A87631B93A9C8004612D1 /* FadeCandyController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FadeCandyController.cpp; sourceTree = "<group>"; };
 		F88A87641B93A9C8004612D1 /* FadeCandyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FadeCandyController.h; sourceTree = "<group>"; };
 		F88A876D1B93B689004612D1 /* OPC.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OPC.cpp; sourceTree = "<group>"; };
@@ -864,6 +867,8 @@
 				03360F171BB859F6003D682A /* StartupController.h */,
 				F8F0BF421C5EB922008878B2 /* ColorManager.cpp */,
 				F8F0BF431C5EB922008878B2 /* ColorManager.h */,
+				F836754A1C63CC4000E59C2C /* ColorSchemes.cpp */,
+				F836754B1C63CC4000E59C2C /* ColorSchemes.h */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -1203,6 +1208,7 @@
 				03C53F191BB8C73400F097B3 /* PongApp.cpp in Sources */,
 				F8F0F08E1C5A73D300BBD2BF /* kiss_fft.c in Sources */,
 				03A30E061BAF661500EEFA03 /* ETF.cpp in Sources */,
+				F836754C1C63CC4000E59C2C /* ColorSchemes.cpp in Sources */,
 				F8F0BF471C5EBA03008878B2 /* ContourSillhouette.cpp in Sources */,
 				03A30E071BAF661500EEFA03 /* fdog.cpp in Sources */,
 				03A30E081BAF661500EEFA03 /* Flow.cpp in Sources */,
