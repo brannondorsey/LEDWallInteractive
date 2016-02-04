@@ -35,18 +35,22 @@ void FFTVisualizerApp::update() {
     fft.update();
     if (shapeHue >= 360) shapeHue = 0;
     shapeColor.setHueAngle(shapeHue +=  hueInterval);
-    draw(0, 0, getWidth(), getHeight());
+    _draw(0, 0, getWidth(), getHeight());
     ofPopStyle();
 };
 
-void FFTVisualizerApp::draw(int x, int y, int width, int height) {
-    
-//    fbo->begin();
-//    ofSetColor(bg);
-//    ofRect(0, 0, getWidth(), getHeight());
-//    ofSetColor(255);
-//    fbo->end();
+void FFTVisualizerApp::onAppSwitch() {
 
+};
+
+void FFTVisualizerApp::_draw(int x, int y, int width, int height) {
+    
+    //    fbo->begin();
+    //    ofSetColor(bg);
+    //    ofRect(0, 0, getWidth(), getHeight());
+    //    ofSetColor(255);
+    //    fbo->end();
+    
     ofPushStyle();
     ofSetColor(bg);
     ofRect(x, y, width, height);
@@ -61,10 +65,6 @@ void FFTVisualizerApp::draw(int x, int y, int width, int height) {
     tex.draw(x, y, width, height);
     fbo->end();
     ofPopStyle();
-};
-
-void FFTVisualizerApp::onAppSwitch() {
-
 };
 
 void FFTVisualizerApp::_drawBins() {

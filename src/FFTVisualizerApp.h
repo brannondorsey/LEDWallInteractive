@@ -19,7 +19,6 @@ public:
     ~FFTVisualizerApp();
     void setup(ofFbo* fbo_);
     void update();
-    void draw(int x, int y, int width, int height);
     void onAppSwitch();
     
     float shapeHue;
@@ -30,6 +29,7 @@ public:
     ofxProcessFFT fft;
     
 protected:
+    void _draw(int x, int y, int width, int height);
     void _drawBins();
     void _drawShape(int x, int y, int width, int height);
 };
