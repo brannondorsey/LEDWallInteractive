@@ -23,6 +23,7 @@
 #endif
 
 #include "StartupController.h"
+#include "RPiSceneChanger.h"
 
 class ofApp : public ofBaseApp{
 public:
@@ -34,6 +35,7 @@ public:
     void keyPressed(int key);
 
     void clearWall();
+    void onRPiSceneChangeButtonPress(void);
 
     FadeCandyController* fadeCandyController;
 
@@ -54,5 +56,6 @@ public:
     bool disableFadeCandies;
 
     bool doSwapCameras;
+    RPiSceneChanger sceneChanger;
 
 };

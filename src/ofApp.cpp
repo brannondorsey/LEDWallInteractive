@@ -11,7 +11,7 @@ void ofApp::setup()
     
     //options for testing locally
     //see also OpenCVEngine::setup to force movie
-    disableFadeCandies = true;
+    disableFadeCandies = false;
     bool skipRPiReboot = true;
     
     startupController.setup(skipRPiReboot);
@@ -73,11 +73,16 @@ void ofApp::setup()
     ofEnableAlphaBlending();
     
     hasStartedFadeCandy = false;
+    
+    sceneChanger.setup();
+    ofAddListener(sceneChanger.sceneChangeEvent, this, &ofApp::onRPiSceneChangeButtonPress);
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-   
+    
+    sceneChanger.update();
+    
     if(!startupController.isReady) return;
     if(!hasStartedFadeCandy && !disableFadeCandies)
     {
@@ -207,6 +212,12 @@ void ofApp::clearWall()
 
     }
 }
+
+void ofApp::onRPiSceneChangeButtonPress(void) {
+    ofLogNotice() << "RPi scene changed button pressed";
+    scheduler.doSwitchApp = true;
+}
+
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
     

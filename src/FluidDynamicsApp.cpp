@@ -124,7 +124,7 @@ void FluidDynamicsApp::update() {
             //    fluid.addTemporalForce(m, d, ofFloatColor(c.x, c.y,0.5) * sin(ofGetElapsedTimef()), 10.0f);
             ofFloatColor color(_colorManager.getForeground());
             color.setBrightness(0.2);
-            _fluid.addTemporalForce(m, d, color, 10.0f);
+            _fluid.addTemporalForce(m, d, color, 20.0f);
             if (i == 0) _prevPoints.first = m;
             else _prevPoints.second = m;
 
