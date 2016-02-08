@@ -21,10 +21,13 @@ void FluidDynamicsApp::setup(ofFbo *fbo_) {
 
     setFBO(fbo_);
     
+    _cloudBackground.setup(ofGetWidth(), ofGetHeight());
+    
     OpenCVEngine::getInstance().setup();
     
     ofColor bg = ofColor(ofRandom(255), ofRandom(255), ofRandom(255));
-    bg.setSaturation(255);
+    if (bg.getSaturation() < 127) bg.setSaturation(127);
+//    bg.setSaturation(255);
     _colorManager.setBackground(bg);
     
     TrackedWall* wall = OpenCVEngine::getInstance().getWall(0);
@@ -106,6 +109,7 @@ void FluidDynamicsApp::setup(ofFbo *fbo_) {
 void FluidDynamicsApp::update() {
     ofPushStyle();
     _colorManager.update();
+    _cloudBackground.update();
     
     OpenCVEngine::getInstance().update();
     
@@ -141,7 +145,8 @@ void FluidDynamicsApp::update() {
 
 void FluidDynamicsApp::onAppSwitch() {
     ofColor bg = ofColor(ofRandom(255), ofRandom(255), ofRandom(255));
-    bg.setSaturation(255);
+//    bg.setSaturation(255);
+    if (bg.getSaturation() < 127) bg.setSaturation(127);
     _colorManager.setBackground(bg);
 };
 
@@ -157,7 +162,12 @@ void FluidDynamicsApp::_draw() {
     _largeFbo.end();
     
     fbo->begin();
+        ofSetColor(255);
+        ofRect(0, 0, getWidth(), getHeight());
+        ofEnableBlendMode(OF_BLENDMODE_MULTIPLY);
+        _cloudBackground.draw();
         _largeFbo.draw(0, 0, getWidth(), getHeight());
+        ofDisableBlendMode();
     fbo->end();
     fbo->draw(0, 0);
 };

@@ -14,6 +14,7 @@
 #include "ColorManager.h"
 #include "TrackedWall.h"
 #include "OpenCVEngine.h"
+#include "CloudBackground.h"
 
 class FluidDynamicsApp : public WallAppBase {
 public:
@@ -36,6 +37,7 @@ protected:
     ofVec2f _oldM;
     std::vector<TrackedWall*> _walls;
     std::pair<ofPoint, ofPoint> _prevPoints;
+    CloudBackground _cloudBackground;
 
 };
 
