@@ -24,7 +24,7 @@ void FFTVisualizerApp::setup(ofFbo* fbo_) {
     bg = ofColor(ofRandom(255), ofRandom(255), ofRandom(255));
     bg.setSaturation(255);
     shapeHue = shapeColor.getHueAngle();
-    hueInterval = 1;
+    hueInterval = 1.5;
     verticalInterval = 0.5;
     fft.setup();
     fft.setNormalize(true);
@@ -92,8 +92,9 @@ void FFTVisualizerApp::_drawShape(int x, int y, int width, int height) {
     ofSetRectMode(OF_RECTMODE_CORNER);
     ofSetLineWidth(2);
     const vector<float>& fftSpectrum = fft.getFFTSpectrum();
-   
+    
     ofPath path;
+    shapeColor.setSaturation(127);
     path.setFillColor(shapeColor);
     path.setFilled(true);
     path.moveTo(width, height);
