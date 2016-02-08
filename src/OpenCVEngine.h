@@ -148,7 +148,7 @@ public:
     {
         
         LocalAddressGrabber :: availableList();
-        string localIP = LocalAddressGrabber :: getIpAddress("en1");
+        string localIP = LocalAddressGrabber :: getIpAddress("en2");
         if(localIP != "192.168.2.200")
         {
             useMovie = true;
