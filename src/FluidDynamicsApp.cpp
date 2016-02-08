@@ -7,6 +7,7 @@
 //
 
 #include "FluidDynamicsApp.h"
+#define STRINGIFY(A) #A
 
 FluidDynamicsApp::FluidDynamicsApp() {
     
@@ -123,11 +124,13 @@ void FluidDynamicsApp::update() {
             c.normalize();
             //    fluid.addTemporalForce(m, d, ofFloatColor(c.x, c.y,0.5) * sin(ofGetElapsedTimef()), 10.0f);
             ofFloatColor color(_colorManager.getForeground());
-            color.setBrightness(0.2);
+            color.setBrightness(0.05);
             _fluid.addTemporalForce(m, d, color, 20.0f);
+            ofPoint s = m;
+            s.y += ofMap(ofNoise(sin(ofGetElapsedTimef())), 0.0, 1.0, 0.0, 200.0); // 200 + (ofNoise(sin(ofGetElapsedTimef()) * 100));
+            _fluid.addTemporalForce(s , d, color, 20.0f);
             if (i == 0) _prevPoints.first = m;
             else _prevPoints.second = m;
-
         }
     }
     
@@ -137,11 +140,13 @@ void FluidDynamicsApp::update() {
 };
 
 void FluidDynamicsApp::onAppSwitch() {
-    
+    ofColor bg = ofColor(ofRandom(255), ofRandom(255), ofRandom(255));
+    bg.setSaturation(255);
+    _colorManager.setBackground(bg);
 };
 
 void FluidDynamicsApp::_draw() {
-    
+
     ofFloatColor bgColor(_colorManager.getBackground());
     
     _largeFbo.begin();
