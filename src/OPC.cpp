@@ -170,7 +170,8 @@ void OPCClient::write()
         largestTime = timeElapsed;
         ofLogVerbose(__func__) << "TOOK " << (endTime - startTime) << "MS LARGEST IS " << OPCClient::largestTime;
     }
-//    ofSleepMillis(25);
+    
+    ofSleepMillis(2);
 }
 
 bool OPCClient::isConnected()
