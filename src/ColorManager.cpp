@@ -11,7 +11,8 @@ ColorManager::ColorManager():
 _fgHue(0),
 _fgHueDirection(1),
 _hueInterval(5),
-_mode(COLOR_MODE_COMPLEMENTARY)
+_mode(COLOR_MODE_COMPLEMENTARY),
+_foregroundRangeWidth(35)
 {
 }
 
@@ -59,13 +60,12 @@ void ColorManager::setBackground(ofColor color) {
     _bgColor = color;
     _fgColor = color;
     if (_mode == COLOR_MODE_COMPLEMENTARY) {
-        float boundLimit = 35;
         _fgHue = abs(int(_bgColor.getHueAngle()) - 180);
         _fgColor.setHueAngle(_fgHue);
-        _fgHueBoundLower = int(_fgHue - boundLimit) % 360;
-        _fgHueBoundUpper = int(_fgHue + boundLimit) % 360;
-        ofLogNotice() << "complementary: " << _fgHue << " upper bound: "
-        << _fgHueBoundUpper << " lower bound: " << _fgHueBoundLower;
+        _fgHueBoundLower = int(_fgHue - _foregroundRangeWidth / 2) % 360;
+        _fgHueBoundUpper = int(_fgHue + _foregroundRangeWidth / 2) % 360;
+//        ofLogNotice() << "complementary: " << _fgHue << " upper bound: "
+//        << _fgHueBoundUpper << " lower bound: " << _fgHueBoundLower;
     }
 }
 
@@ -90,4 +90,9 @@ void ColorManager::setMode(Mode mode) {
 
 void ColorManager::setHueInterval(float interval) {
     _hueInterval = interval;
+}
+
+void ColorManager::setForegroundRangeWidth(int width) {
+    _foregroundRangeWidth = width;
+    setBackground(_bgColor);
 }

@@ -29,11 +29,13 @@ public:
     Mode getMode() const;
     void setMode(Mode mode);
     void setHueInterval(float interval);
+    void setForegroundRangeWidth(int width);
     
 protected:
     
     float _fgHue;
     int _fgHueDirection;
+    int _foregroundRangeWidth;
     float _fgHueBoundUpper;
     float _fgHueBoundLower;
     float _hueInterval;
