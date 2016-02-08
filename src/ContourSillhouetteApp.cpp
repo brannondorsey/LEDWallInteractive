@@ -19,7 +19,7 @@ void ContourSillhouetteApp::setup(ofFbo* fbo_) {
     setFBO(fbo_);
     OpenCVEngine::getInstance().setup();
     
-    ofColor bg = ofColor::turquoise;
+    ofColor bg = ofColor(ofRandom(0, 255), ofRandom(0, 255), ofRandom(0, 255));
     bg.setSaturation(255);
     _colorManager.setBackground(bg);
 
@@ -50,14 +50,16 @@ void ContourSillhouetteApp::setup(ofFbo* fbo_) {
     fbo->end();
     
     _lastTimerMillis = 0;
-    _alphaDecrement = 2.01;
+    _alphaDecrement = 3.01;
     _scaleIncrement = 0.03;
     _hueInterval = 5;
-    _timerMillis = 350;
+    _timerMillis = 100;
 }
 
 void ContourSillhouetteApp::onAppSwitch() {
-    
+    ofColor bg = ofColor(ofRandom(0, 255), ofRandom(0, 255), ofRandom(0, 255));
+    bg.setSaturation(255);
+    _colorManager.setBackground(bg);
 }
 
 void ContourSillhouetteApp::update() {
