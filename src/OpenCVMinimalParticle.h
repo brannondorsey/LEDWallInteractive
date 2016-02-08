@@ -4,6 +4,7 @@
 #include "OpenCVEngine.h"
 
 #include "ParticleLayer.h"
+#include "OpenCVParticleApp.h"
 
 struct WallParticleGroup
 {
@@ -17,7 +18,6 @@ struct WallParticleGroup
         
     }
 };
-
 
 class OpenCVMinimalParticle : public WallAppBase
 {
@@ -35,6 +35,7 @@ public:
     void updateParticles();
     
     ofFbo backgroundFBO;
+    ofFbo contentFBO;
 
     ofTexture particleTexture;
     void drawBackground();
@@ -42,6 +43,8 @@ public:
     WallParticleGroup leftWall;
     WallParticleGroup rightWall;
     vector<WallParticleGroup*> wallGroups;
+    vector<ColorPair> colorPairs;
+    int currentColorPairIndex;
     
     void onAppSwitch();
     

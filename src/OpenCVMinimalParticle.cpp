@@ -28,6 +28,12 @@ void OpenCVMinimalParticle::setup(ofFbo* fbo_)
     backgroundFBO.begin();
     ofClear(0, 0, 0, 0);
     backgroundFBO.end();
+    
+    contentFBO.allocate(wholeWallWidth, wallHeight);
+    contentFBO.begin();
+    ofClear(0, 0, 0, 0);
+    contentFBO.end();
+    
     particleSize = 400;
     particleLayer->setup(particleSize);
     
@@ -64,8 +70,24 @@ void OpenCVMinimalParticle::setup(ofFbo* fbo_)
     wallGroups.push_back(&rightWall);
     
     ofLoadImage(particleTexture, "dot.png");
-
-
+    
+    ColorPair c1; //1.jpg
+    c1.color1 = ofColor(255, 22, 93); //red
+    c1.color2 = ofColor(171, 255, 99); //green
+    
+    ColorPair c2; //3.jpg
+    c2.color1 = ofColor(229, 255, 86); //lime
+    c2.color2 = ofColor(0, 255, 234); //teal
+    
+    ColorPair c3; //4.jpg
+    c3.color1 = ofColor(255, 137, 87); //orange
+    c3.color2 = ofColor(223, 87, 255); //purple
+    
+    colorPairs.push_back(c1);
+    colorPairs.push_back(c2);
+    colorPairs.push_back(c3);
+    
+    currentColorPairIndex = ofRandom(colorPairs.size());
 }
 
 void OpenCVMinimalParticle::updateParticles()
@@ -155,16 +177,19 @@ void OpenCVMinimalParticle::update()
     ofPopStyle();
     OpenCVEngine::getInstance().contentLayerFBO.end();
     
-    fbo->begin();
-    ofPushStyle();
-    
-    //backgroundFBO.draw(0, 0);
+    contentFBO.begin();
+    ofSetColor(0, 25);
+    ofRect(0, 0, contentFBO.getWidth(), contentFBO.getHeight());
+    ofSetColor(255);
     OpenCVEngine::getInstance().contentLayerFBO.draw(0,
                                                      0,
                                                      480,
                                                      120);
-    ofPopStyle();
+    contentFBO.end();
     
+    fbo->begin();
+    backgroundFBO.draw(0, 0);
+    contentFBO.draw(0, 0);
     fbo->end();
     
     
@@ -172,18 +197,16 @@ void OpenCVMinimalParticle::update()
 }
 void OpenCVMinimalParticle::onAppSwitch()
 {
-
+    currentColorPairIndex = ofRandom(colorPairs.size());
 }
 
 void OpenCVMinimalParticle::drawBackground()
 {
-#if 0
     drawGradientMesh(colorPairs[currentColorPairIndex].color1,
                      colorPairs[currentColorPairIndex].color2,
                      OF_GRADIENT_BAR,
                      ofGetWidth(),
                      ofGetHeight());
-#endif
 }
 
 
