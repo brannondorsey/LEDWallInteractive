@@ -49,10 +49,10 @@ void ofApp::setup()
     openCVMinimalParticle->name = "OpenCVMinimalParticle";
     wallApps.push_back(openCVMinimalParticle);
     
-    OpenCVParticleApp* openCVParticleApp = new OpenCVParticleApp();
-    openCVParticleApp->name = "OpenCVParticleApp";
-    openCVParticleApp->setup(&fbo);
-    wallApps.push_back(openCVParticleApp);
+//    OpenCVParticleApp* openCVParticleApp = new OpenCVParticleApp();
+//    openCVParticleApp->name = "OpenCVParticleApp";
+//    openCVParticleApp->setup(&fbo);
+//    wallApps.push_back(openCVParticleApp);
     
     VideoPlayerApp* videoPlayerApp = new VideoPlayerApp();
     videoPlayerApp->name = "VideoPlayerApp";
