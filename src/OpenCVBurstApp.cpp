@@ -25,7 +25,12 @@ void OpenCVBurstApp::setup(ofFbo* fbo_)
     cloudBackground.setup(ofGetWidth(), ofGetHeight());
     
     numBlobsToDraw = 0;
-
+    
+    ofColor bg = ofColor(ofRandom(255), ofRandom(255), ofRandom(255));
+    if (bg.getSaturation() < 127) bg.setSaturation(127);
+    colorManager.setBackground(bg);
+    colorPair.first = colorManager.getBackground();
+    colorPair.second = colorManager.getForeground();
 
 }
 
@@ -114,18 +119,17 @@ void OpenCVBurstApp::update()
             
             drawCounter = 1;
             currentWall->fbo.begin();
-            ofColor orange(255, 137, 87);
-            ofColor purple(114, 0, 255);
+//            ofColor orange(255, 137, 87);
+//            ofColor purple(114, 0, 255);
 
             if(i == 0)
             {
-                color = ofColor::red;
+                color = colorPair.first;
                 
                 
             }else
             {
-                color = purple;
-                
+                color = colorPair.second;
                 
             }
             
@@ -181,6 +185,14 @@ void OpenCVBurstApp::drawBackground()
                      OF_GRADIENT_BAR,
                      ofGetWidth(),
                      ofGetHeight());
+}
+
+void OpenCVBurstApp::onAppSwitch() {
+    ofColor bg = ofColor(ofRandom(255), ofRandom(255), ofRandom(255));
+    if (bg.getSaturation() < 127) bg.setSaturation(127);
+    colorManager.setBackground(bg);
+    colorPair.first = colorManager.getBackground();
+    colorPair.second = colorManager.getForeground();
 }
 
 

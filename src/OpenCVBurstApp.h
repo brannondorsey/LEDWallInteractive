@@ -3,6 +3,7 @@
 #include "WallAppBase.h"
 #include "OpenCVEngine.h"
 #include "CloudBackground.h"
+#include "ColorManager.h"
 
 
 class OpenCVBurstApp : public WallAppBase
@@ -11,10 +12,9 @@ public:
     
     void setup(ofFbo* fbo_);
     void update();
-    
+    void onAppSwitch();
    
     bool doUpdateBackground;
-        
     
     int blockSize;
     int blockDrawSize;
@@ -31,6 +31,7 @@ public:
     int numBlobsToDraw;
     int drawCounter;
     vector<ofPolyline> blobs;
+    pair<ofColor, ofColor> colorPair;
+    ColorManager colorManager;
     
-    void onAppSwitch(){};
 };
