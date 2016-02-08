@@ -50,10 +50,11 @@ void ContourSillhouetteApp::setup(ofFbo* fbo_) {
     fbo->end();
     
     _lastTimerMillis = 0;
-    _alphaDecrement = 3.01;
-    _scaleIncrement = 0.03;
+    _alphaDecrement = 10.01;
+    _scaleIncrement = 0.05;
     _hueInterval = 5;
     _timerMillis = 100;
+    _colorManager.setForegroundRangeWidth(80);
 }
 
 void ContourSillhouetteApp::onAppSwitch() {
@@ -148,7 +149,9 @@ void ContourSillhouetteApp::_draw() {
         ofSetColor(_colorManager.getBackground());
         ofRect(0, 0, getWidth(), getHeight());
         ofSetColor(255);
+        ofEnableBlendMode(OF_BLENDMODE_SCREEN);
         _largeFbo.draw(0, 0, getWidth(), getHeight());
+        ofEnableBlendMode(OF_BLENDMODE_DISABLED);
     fbo->end();
     fbo->draw(0, 0);
 }
