@@ -12,7 +12,15 @@ void ofApp::setup()
     //options for testing locally
     //see also OpenCVEngine::setup to force movie
     disableFadeCandies = false;
-    bool skipRPiReboot = true;
+    bool skipRPiReboot = false;
+    
+    // if SKIPRPIREBOOT env is set, don't reboot Pis (used by poll_installation.sh cronjob)
+    char* rebootEnv;
+    rebootEnv = getenv("SKIPRPIREBOOT");
+    if (rebootEnv!=NULL) {
+        ofLogNotice() << "found SKIPRPIREBOOT env variable, not rebooting RPis";
+        skipRPiReboot = true;
+    }
     
     startupController.setup(skipRPiReboot);
     colorSchemes.setup();
@@ -104,12 +112,13 @@ void ofApp::update(){
     
     if(scheduler.doShutDown)
     {
-        ofExit(0);
-        return;
+//        ofExit(0);
+//        return;
     }
     
     if(scheduler.doSwitchApp)
     {
+        cout << "switching app" << endl;
         if (currentWallAppIndex + 1 < wallApps.size())
         {
             currentWallAppIndex++;
